@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<st3:cards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:st3="http://nure.ua.skrypnyk.practice7"
+           xsi:schemaLocation="http://nure.ua.skrypnyk.practice7 oldCards.xsd">
+
+
+    <oldCards>
+        <oldCard>
+            <Theme>Городской пейзаж</Theme>
+            <Type>
+                <TypeOfCard>Поздравительная</TypeOfCard>
+                <isPosted>true</isPosted>
+            </Type>
+            <Country>Украина</Country>
+            <Year>1841</Year>
+            <Author>Шевченко</Author>
+            <Valuable>Историческая</Valuable>
+        </oldCard>
+
+        <oldCard>
+            <Theme>Природа</Theme>
+            <Type>
+                <TypeOfCard>Рекламная</TypeOfCard>
+                <isPosted>true</isPosted>
+            </Type>
+            <Country>Польша</Country>
+            <Year>2028</Year>
+            <Valuable>Другая</Valuable>
+        </oldCard>
+    </oldCards>
+
+
+</st3:cards>

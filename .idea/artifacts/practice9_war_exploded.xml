@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="practice9:war exploded">
+    <output-path>$PROJECT_DIR$/practice9/target/practice9</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="practice9" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/practice9/target/practice9/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="practice9/web/Web" />
+    </root>
+  </artifact>
+</component>

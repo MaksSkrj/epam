@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nure.ua.skrypnyk.practice7"
+            xmlns:tns="http://nure.ua.skrypnyk.practice7">
+
+    <xsd:element name="cards">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="oldCards" type="tns:oldCards"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="oldCards">
+        <xsd:sequence>
+            <xsd:element name="oldCard" type="tns:oldCard" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="oldCard">
+        <xsd:sequence>
+            <xsd:element name="Theme" type="xsd:string"/>
+            <xsd:element name="Type" type="tns:Type"/>
+            <xsd:element name="Country" type="xsd:string"/>
+            <xsd:element name="Year" type="xsd:positiveInteger"/>
+            <xsd:element name="Author" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="Valuable" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="Type">
+        <xsd:sequence>
+            <xsd:element name="TypeOfCard" type="xsd:string"/>
+            <xsd:element name="isPosted" type="xsd:boolean"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>
