@@ -1,5 +1,5 @@
 package ua.nure.skrypnyk.practice2;
-;
+
 import java.util.Iterator;
 
 public class Demo {
@@ -58,7 +58,7 @@ public class Demo {
             System.out.print(it.next() + " ");
         }
         System.out.println();
-        // [1, 3, 4] //TODO
+        // [1, 3, 4]
         it = list.iterator();
         it.next();
         it.next();
@@ -68,7 +68,7 @@ public class Demo {
         // 3
         System.out.println(it.next());
 
-        // [1, 4]`//TODO
+        // [1, 4]
         it.remove();
         System.out.println(list);
 

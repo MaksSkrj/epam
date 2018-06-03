@@ -27,33 +27,33 @@ public class MyListImpl implements MyList, ListIterable {
 
     @Override
     public boolean remove(Object o) {
-
-        if (o == null) {
-
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] == null) {
-                    System.arraycopy(arr, i + 1, arr, i, arr.length - 1);
-                    arr[arr.length - 1] = null;
-                    return true;
-                }
-            }
+        Object[] newData = new Object[arr.length - 1];
+        int index = getFirstIndexOfExistingElement(o);
+        if (index == -1)
+            return false;
+        Object[] dataFirstHalf = Arrays.copyOf(arr, index);
+        if (index == arr.length - 1) {
+            System.arraycopy(arr, 0, newData, 0, arr.length - 1);
         } else {
+            Object[] dataSecondHalf = Arrays.copyOfRange(arr, index + 1, arr.length);
+            System.arraycopy(dataFirstHalf, 0, newData, 0, dataFirstHalf.length);
+            System.arraycopy(dataSecondHalf, 0, newData, dataFirstHalf.length, dataSecondHalf.length);
+        }
+        arr = newData;
+        return true;
+    }
 
-            for (int i = 0; i < arr.length; i++) {
-                Object[] help = new Object[arr.length - 1];
-                if (o.equals(arr[i])) {
-                    arr[i] = null;
-                    for (int j = i; j < arr.length; j++) {
-                        arr[j] = arr[i + 1];
-                    }
-                    System.arraycopy(arr, 0, help, 0, arr.length - 1);
-                    arr = help;
-                    return true;
-                }
+    private int getFirstIndexOfExistingElement(Object o) {
+        for (int i = 0; i < arr.length; i++) {
+            if (o == null) {
+                if (arr[i] == null)
+                    return i;
+            } else {
+                if (o.equals(arr[i]))
+                    return i;
             }
         }
-
-        return false;
+        return -1;
     }
 
     @Override
