@@ -6,25 +6,8 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
           version="3.1">
-  <display-name>Archetype Created Web Application</display-name>
 
-  <servlet>
-    <servlet-name>Calculator</servlet-name>
-    <servlet-class>Calculator</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Calculator</servlet-name>
-    <url-pattern>/calc</url-pattern>
-  </servlet-mapping>
 
-  <servlet>
-    <servlet-name>Vote</servlet-name>
-    <servlet-class>Vote</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Vote</servlet-name>
-    <url-pattern>/vote</url-pattern>
-  </servlet-mapping>
 
 </web-app>
 

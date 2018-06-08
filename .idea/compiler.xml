@@ -11,7 +11,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="practice09" target="1.5" />
-      <module name="practice9" target="1.7" />
+      <module name="practice9" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
